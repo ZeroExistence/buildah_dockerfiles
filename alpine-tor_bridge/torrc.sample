@@ -1,0 +1,12 @@
+DataDirectory /data/.tor
+ORPort 0.0.0.0:8448
+ContactInfo <yourcontact@yourdomain.com>
+Log notice stdout
+RunAsDaemon 0
+SocksPort 0
+
+#Bridge Config
+BridgeRelay 1
+ServerTransportPlugin obfs4 exec /usr/bin/obfs4proxy
+ServerTransportListenAddr obfs4 0.0.0.0:8443
+ExtORPort auto
